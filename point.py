@@ -57,6 +57,8 @@ def main():
     p2 = Point(-1.0, 6.5)
     print("It is a distance {:.5} away from the point ({}, {}).".format(p1.dist_to(p2), p2.x, p2.y))
 
+    rect = Rectangle(Point(1,1),Point(4,5))
+
 
 if __name__ == "__main__":
     main()
