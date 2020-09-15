@@ -1,5 +1,7 @@
 from math import sqrt
 
+from math import pi
+
 class Point:
 
     x = 0.0
@@ -31,6 +33,21 @@ class Rectangle:
 
     def perimeter(self):
         return 2*(self.p2.x - self.p1.x)+2*(self.p2.y - self.p1.y)
+
+class Circle:
+
+    c = Point(0,0)
+    r = 0.0
+
+    def __init__(self, c, r):
+        self.c = c
+        self.r = r
+
+    def area(self):
+        return pi*self.r**2
+
+    def perimeter(self):
+        return 2*pi*self.r
 
 
 def main():
