@@ -49,6 +49,9 @@ class Circle:
     def perimeter(self):
         return 2*pi*self.r
 
+    def inside(self, p):
+        return self.c.dist_to(p) <= r
+
 
 def main():
     p1 = Point(3.0, 4.0)
@@ -57,7 +60,12 @@ def main():
     p2 = Point(-1.0, 6.5)
     print("It is a distance {:.5} away from the point ({}, {}).".format(p1.dist_to(p2), p2.x, p2.y))
 
-    rect = Rectangle(Point(1,1),Point(4,5))
+    rect = Rectangle(Point(1,1), Point(4,5))
+    print("The rectangle defined by the corners ({}, {}) and ({}, {}) has an area of {} and a perimeter of {}.".format(rect.p1.x, rect.p1.y, rect.p2.x, rect.p2.y, rect.area(), rect.perimeter()))
+
+    circ = Circle(Point(-2,3), 2)
+    p3 = Point(0, 1)
+    print("The circle with radius {} centered at the point ({}, {}) {} ({}, {}) and has an area of {} and a perimeter of {}.")
 
 
 if __name__ == "__main__":
