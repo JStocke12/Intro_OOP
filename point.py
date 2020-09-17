@@ -50,7 +50,7 @@ class Circle:
         return 2*pi*self.r
 
     def inside(self, p):
-        return self.c.dist_to(p) <= r
+        return self.c.dist_to(p) <= self.r
 
 
 def main():
@@ -65,7 +65,7 @@ def main():
 
     circ = Circle(Point(-2,3), 2)
     p3 = Point(0, 1)
-    print("The circle with radius {} centered at the point ({}, {}) {} the point ({}, {}), and has an area of {} and a perimeter of {}.".format(circ.r, circ.p.x, circ.p.y, "contains" if circ.inside(p3) else "does not contain", p3.x, p3.y, circ.area(), circ.perimeter()))
+    print("The circle with radius {} centered at the point ({}, {}) {} the point ({}, {}), and has an area of {} and a perimeter of {}.".format(circ.r, circ.c.x, circ.c.y, "contains" if circ.inside(p3) else "does not contain", p3.x, p3.y, circ.area(), circ.perimeter()))
 
 
 if __name__ == "__main__":
